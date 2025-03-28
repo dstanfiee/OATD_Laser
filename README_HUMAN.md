@@ -1,13 +1,16 @@
-﻿# OATD_Laser Repository
-This repository is for process engineers developing automation, state machine modeling, and statistical analysis tools.
+﻿# Advanced_Packaging_Laser_Repository
+
+This repository serves as a centralized location for storing and accessing scripts developed by engineers working on laser-related tools at Intel. Engineers are encouraged to contribute by submitting changes to existing scripts or adding new ones, following the guidelines outlined in this document and the additional resources available in the **docs/** directory.
+
+The repository is managed using Git, a distributed version control system, which allows multiple engineers to collaborate on various interrelated projects simultaneously. To avoid conflicts, ensure that no one else is making divergent changes to the same project area at the same time, as this may result in overwritten changes during merges to the main branch. Refer to the `Git` section below for more details on distributed version control.
 
 ## Directory Structure:
+At the time of launch, the repository relies on a straightforward directory structure that should be built on and expanded as new projects arise that are not covered by the following areas:
 - **data_visualization/** → Scripts for data visualization tasks
 - **statistical_analysis/** → Scripts for statistical analysis
-- **automation/** → Scripts for automating processes
 - **state_machine_modeling/** → State machine implementations in Python, MATLAB, and JSL
-- **data/** → Log files, SPC data, XML, and equipment-related datasets
-- **docs/** → Guides on language selection, workflows, onboarding, and state machine modeling.
+- **data/** → Test Log files, SPC data, XML, and equipment-related datasets. **Note** any data that is designated Intel Top Secret (ITS) should not be stored in the **data/** directory. Ideally ITS content should be stored locally in a separate directory outside the cloned repository directory. If this is not feesible and ITS data is stored locally in the **data/** during development, ensure that you do not stage those changes made to the **data/** directory when committing a change to the main branch. See the `README.md` file in  `docs` for further discussion on designing scripts to allow for reading input data from a configurable local directory.
+- **docs/** → Guides on language selection, workflows, onboarding.
 
 Each function has subfolders for **Python, R, JSL, and MATLAB**. See individual README files for details.
 
@@ -51,6 +54,7 @@ Each function has subfolders for **Python, R, JSL, and MATLAB**. See individual 
 3. **Refine and Iterate:**
    - Refine the generated code as needed and iterate on the instructions provided to GitHub Copilot for improved results.
 
+# Git
 ## Using VS Code to Clone the Repository Locally
 1. **Install VS Code:**
    - Download and install [Visual Studio Code](https://code.visualstudio.com/).
@@ -92,19 +96,17 @@ Each function has subfolders for **Python, R, JSL, and MATLAB**. See individual 
   - [Code Complete](https://en.wikipedia.org/wiki/Code_Complete)
   - [Clean Code](https://en.wikipedia.org/wiki/Clean_Code)
 
-```python
+The below comments should be added to the header of all scripts developed within this repository
+
+- python/R
+```
 # Intel Corporation Internal Use Only
 # 
 # This software is intended solely for internal use within Intel Corporation.
 # Unauthorized copying or distribution of this software, via any medium, is strictly prohibited.
 ```
-```r
-# Intel Corporation Internal Use Only
-# 
-# This software is intended solely for internal use within Intel Corporation.
-# Unauthorized copying or distribution of this software, via any medium, is strictly prohibited.
+- MATLAB
 ```
-```matlab
 % Intel Corporation Internal Use Only
 % 
 % This software is intended solely for internal use within Intel Corporation.
