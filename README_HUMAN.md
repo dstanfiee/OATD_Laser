@@ -76,6 +76,7 @@ Each function has subfolders for **Python, R, JSL, and MATLAB**. See individual 
 4. **Push Changes:**
    - Open the Command Palette (`Ctrl+Shift+P`).
    - Type `Git: Push` and select it.
+   - Alternatively just select the blue icon `Sync Changes 1↑`
 5. **Create a Pull Request:**
    - Go to the repository on GitHub.
    - Click the `Compare & pull request` button.
